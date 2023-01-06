@@ -1,0 +1,76 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\margl1440\margr1440\vieww13560\viewh10920\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+sudo xbps-install -Su\
+\
+sudo xbps-install -Su vsv socklog-void xorg xterm nerd-fonts git\
+\
+Ln -s /etc/sv/socklog-unix /var/service/\
+Ln -s /etc/sv/nanoklogd /var/service/\
+\
+cp /etc/X11/xinit/xinitrc ~/.xinitrc\
+Chmod +x ~/.xinitrc\
+\
+Sudo xbps-install -Su 
+\f1\fs22 \cf2 \CocoaLigature0 slim slim-void-theme
+\f0\fs24 \cf0 \CocoaLigature1 \
+\
+\
+Sudo xbps-install -Su alacritty herbstluftwm\
+\
+Sudo xbps-install feh picom ranger neofetch neovim firefox-esr starship curl thefuck btop duf dust bat procs\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+starship preset nerd-font-symbols > ~/.config/starship.toml\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\
+### neovim\
+\
+Xbps-install -Su make gcc wget ripgrep nodejs fd unzip\
+\
+Mkdir -p ~/.config/nvim\
+\
+#### https://www.youtube.com/watch?v=stqUbv-5u2s&ab_channel=TJDeVries\
+####  https://github.com/nvim-lua/kickstart.nvim\
+#### https://www.youtube.com/watch?v=w7i4amO_zaE&list=PL3PYGQRVAjrMxP5HK45CTnR7Yv-QYR1Qp&index=9&ab_channel=ThePrimeagen\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 curl -k https://raw.githubusercontent.com/nvim-lua/kickstart.nvim/master/init.lua -o ~/.config/nvim/init.lua
+\f0\fs24 \cf0 \CocoaLigature1 \
+\
+\
+### rofi\
+\
+Sudo xbps-install -Su rofi\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \expnd0\expndtw0\kerning0
+\
+git clone --depth=1 https://github.com/adi1090x/rofi.git\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \
+\
+### polybar\
+\
+Sudo xbps-install -Su polybar pywal calc networkmanager_dmenu\
+\
+\
+### ntp\
+\
+Sudo xbps-install -Su chrony \
+\
+\
+}
