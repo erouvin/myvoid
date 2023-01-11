@@ -22,8 +22,14 @@ Sudo xbps-install -Su
 \f1\fs22 \cf2 \CocoaLigature0 slim slim-void-theme
 \f0\fs24 \cf0 \CocoaLigature1 \
 \
+sudo ln -s /etc/sv/slim /var/service/
+
+Edit /etc/slim.conf to modify the theme ( /usr/share/slim )
 \
 Sudo xbps-install -Su alacritty herbstluftwm\
+
+mkdir -p ~/.config/herbstluftwm/
+
 \
 Sudo xbps-install feh picom ranger neofetch neovim firefox-esr starship curl thefuck btop duf dust bat procs\
 \
