@@ -10,6 +10,9 @@ hc emit_hook reload
 
 xsetroot -solid '#5A8E3A'
 
+# Define default terminal (rofi)
+export TERMINAL=alacritty
+
 #picom --experimental-backends &
 picom -b
 
